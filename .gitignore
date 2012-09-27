@@ -3,6 +3,6 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
-.idea/workspace.xml
+.idea/*
 .idea/tasks.xml
 .sass-cache/
