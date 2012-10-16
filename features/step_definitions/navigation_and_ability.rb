@@ -5,11 +5,13 @@ When /^I do nothing$/ do
 end
 
 Then /^I see a "(.*?)" menu item$/ do |arg1|
+  save_and_open_page
   find("##{arg1.downcase}").should have_content(arg1)
+
 end
 
 Then /^I see the "(.*?)" page$/ do |arg1|
-  save_and_open_page
+  #save_and_open_page
   find("#page_title").should have_content(arg1)
 end
 
@@ -48,6 +50,6 @@ end
 When /^I visit a church other than my own$/ do
   church_id = Church.find_by_name("Stockton First UMC").id
   visit admin_church_path(church_id)
-  save_and_open_page
+  #save_and_open_page
 end
 

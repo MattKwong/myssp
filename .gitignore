@@ -6,3 +6,4 @@ tmp/**/*
 .idea/*
 .idea/tasks.xml
 .sass-cache/
+stripe.rb

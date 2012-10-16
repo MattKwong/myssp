@@ -14,8 +14,8 @@ ActiveAdmin.register Registration do
     column :liaison_id do |liaison|
       link_to liaison.liaison.name, admin_liaison_path(liaison.liaison_id)
     end
-    column :church_id do |church|
-      link_to church.church.name, admin_church_path(church.church_id)
+    column :church_id do |reg|
+      link_to reg.liaison.church.name, admin_church_path(reg.liaison.church_id)
     end
 
     column :requested_youth, :label => "Youth"
